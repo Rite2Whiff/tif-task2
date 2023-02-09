@@ -1,5 +1,6 @@
-import { Box, Flex, Text, Grid } from "@chakra-ui/react";
-import React from "react";
+import { Box, Flex, Text, Grid, Select } from "@chakra-ui/react";
+import React, { useState } from "react";
+
 import {
   IInterViewSettings,
   IJobDetails,
@@ -83,7 +84,13 @@ const PreviewCard: React.FC<{
                 {requisitionDetails?.requisitionTitle}
               </Text>
               <Flex justifyContent="space-around" alignItems="center">
-                <Text fontSize="0.8rem" mr="0.4rem" fontWeight="200" as="p">
+                <Text
+                  fontSize="0.8rem"
+                  mr="0.4rem"
+                  fontWeight="200"
+                  as="p"
+                  onClick={() => console.log(requisitionDetails?.noOfOpenings)}
+                >
                   OPENINGS
                 </Text>
                 <Text fontSize="1rem" fontWeight="bold" as="span">
